@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Forms & Templates</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+</head>
+<body class="bg-gray-100">
+
+    <!-- Header -->
+    <header class="bg-blue-600 p-4">
+        <h1 class="text-white text-2xl font-semibold">Forms & Templates</h1>
+    </header>
+
+    <!-- Main Content -->
+    <main class="container mx-auto p-6">
+        <!-- Search Bar -->
+        <div class="mb-6">
+            <input type="text" id="search" class="w-full p-2 border border-gray-300 rounded-lg" placeholder="Search forms or templates...">
+        </div>
+
+        <!-- List of Forms & Templates -->
+        <div class="bg-white shadow-md rounded-lg p-4">
+            <h2 class="text-xl font-semibold mb-4">Available Forms & Templates</h2>
+
+            <ul id="template-list" class="space-y-4">
+                <!-- Template Item 1 -->
+                <li class="flex items-center justify-between p-4 bg-gray-50 rounded-lg shadow-sm">
+                    <span class="text-gray-700 font-medium">Communication Plan Template</span>
+                    <a href="#" class="text-blue-500 hover:text-blue-700">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M4 16v2a2 2 0 002 2h12a2 2 0 002-2v-2M7 10l5-5m0 0l5 5m-5-5v12" />
+                        </svg>
+                    </a>
+                </li>
+
+                <!-- Template Item 2 -->
+                <li class="flex items-center justify-between p-4 bg-gray-50 rounded-lg shadow-sm">
+                    <span class="text-gray-700 font-medium">IT Requisition Form</span>
+                    <a href="#" class="text-blue-500 hover:text-blue-700">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M4 16v2a2 2 0 002 2h12a2 2 0 002-2v-2M7 10l5-5m0 0l5 5m-5-5v12" />
+                        </svg>
+                    </a>
+                </li>
+
+                <!-- Template Item 3 -->
+                <li class="flex items-center justify-between p-4 bg-gray-50 rounded-lg shadow-sm">
+                    <span class="text-gray-700 font-medium">Vendor Registration Template</span>
+                    <a href="#" class="text-blue-500 hover:text-blue-700">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M4 16v2a2 2 0 002 2h12a2 2 0 002-2v-2M7 10l5-5m0 0l5 5m-5-5v12" />
+                        </svg>
+                    </a>
+                </li>
+
+                <!-- Template Item 4 -->
+                <li class="flex items-center justify-between p-4 bg-gray-50 rounded-lg shadow-sm">
+                    <span class="text-gray-700 font-medium">Project Management Form</span>
+                    <a href="#" class="text-blue-500 hover:text-blue-700">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M4 16v2a2 2 0 002 2h12a2 2 0 002-2v-2M7 10l5-5m0 0l5 5m-5-5v12" />
+                        </svg>
+                    </a>
+                </li>
+
+                <!-- Add more items as needed -->
+            </ul>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-blue-600 p-4 text-white text-center mt-6">
+        &copy; 2024 Your Company. All rights reserved.
+    </footer>
+
+    <!-- Optional: Script to filter the list using the search bar -->
+    <script>
+        const searchInput = document.getElementById('search');
+        const templateList = document.getElementById('template-list');
+        const items = templateList.getElementsByTagName('li');
+
+        searchInput.addEventListener('input', function () {
+            const filter = searchInput.value.toLowerCase();
+            Array.from(items).forEach(item => {
+                const text = item.textContent.toLowerCase();
+                if (text.includes(filter)) {
+                    item.style.display = '';
+                } else {
+                    item.style.display = 'none';
+                }
+            });
+        });
+    </script>
+</body>
+</html>
