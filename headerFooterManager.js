@@ -9,6 +9,8 @@ class SpecialHeader extends HTMLElement {
           /* Example text color when active */
         }
       </style>
+      <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
   
       <header class="bg-white text-black flex items-center justify-between p-4 shadow-md sticky top-0">
         <a href="#" class="text-2xl font-bold rounded">SCBD Portal</a>
