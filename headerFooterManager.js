@@ -53,7 +53,7 @@ class SpecialHeader extends HTMLElement {
         }
 
         .topnav a:hover {
-            background-color: #0400ff;
+            background-color: #cae5fa;
         }
 
         /* Dropdown menu styles */
